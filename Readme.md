@@ -1,76 +1,74 @@
-# Graph Generator & Analyzer
+# 🚀 Graph Generator & Analyzer
 
-Bu proje, Çizge Teorisi (Graph Theory) algoritmalarını görselleştirmek, analiz etmek ve üzerinde işlemler yapmak amacıyla geliştirilmiş Java tabanlı bir konsol uygulamasıdır. 
+This project is a Java-based console application developed to visualize, analyze, and perform operations on Graph Theory algorithms.
 
-**Enigma Console** kütüphanesi kullanılarak geliştirilen bu araç, kullanıcıya grafikler oluşturma, matris hesaplamaları yapma ve grafiklerin yapısal özelliklerini (izomorfizma, bipartite, complete vb.) test etme imkanı sunar.
+Developed using the **Enigma Console** library, this tool allows users to generate graphs, perform matrix calculations, and test the structural properties of graphs (isomorphism, bipartite, complete, etc.).
 
-## 🚀 Öne Çıkan Özellikler
+## 🌟 Featured Highlights
 
-### 1. Grafik Oluşturma ve Görselleştirme
-* **Derece Dizisi (Degree Sequence):** Kullanıcının girdiği derece dizisine uygun (Havel-Hakimi algoritması veya Rastgele yöntem ile) grafikleri otomatik oluşturur.
-* **Görsel Çizim:** Düğümleri (Vertices) ve kenarları (Edges) konsol ekranında ASCII/Karakter tabanlı olarak çizer.
-* **Dinamik Yerleşim:** Düğümler ızgara (grid) üzerine çakışmayacak şekilde rastgele yerleştirilir.
+### 1. Graph Generation and Visualization
+* **Degree Sequence:** Automatically generates graphs matching a user-input degree sequence (using the Havel-Hakimi algorithm or a randomized method).
+* **Visual Drawing:** Draws vertices and edges on the console screen using ASCII/Character-based representations.
+* **Dynamic Placement:** Vertices are placed randomly on a grid ensuring they do not overlap.
 
-### 2. Grafik Analizi (Graph Properties)
-Oluşturulan veya yüklenen grafikler üzerinde şu testler yapılabilir:
-* **Bağlantılılık (Connectivity):** Grafın tek parça olup olmadığını DFS ile kontrol eder.
-* **Tam Grafik (Complete Graph):** Tüm düğümlerin birbirine bağlı olup olmadığını test eder.
-* **İki Parçalı (Bipartite):** Grafın iki bağımsız kümeye ayrılıp ayrılamayacağını kontrol eder.
-* **Döngü, Tekerlek ve Yıldız Grafikleri:** Grafın `Cycle`, `Wheel` veya `Star` yapısında olup olmadığını analiz eder.
-* **C3 Döngüsü:** Grafta üçgen (Triangle) yapıları olup olmadığını tarar.
-* **İzole Düğümler:** Bağlantısı olmayan düğümleri tespit eder.
+### 2. Graph Analysis (Graph Properties)
+The following tests can be performed on generated or loaded graphs:
+* **Connectivity:** Checks if the graph is connected (a single piece) using DFS.
+* **Complete Graph:** Tests whether all vertices are connected to every other vertex.
+* **Bipartite:** Checks if the graph can be divided into two independent sets.
+* **Cycle, Wheel, and Star Graphs:** Analyzes whether the graph conforms to a `Cycle`, `Wheel`, or `Star` structure.
+* **C3 Cycle:** Scans the graph for triangular (Triangle) structures.
+* **Isolated Vertices:** Detects vertices that have no connections.
 
-### 3. Graf İzomorfizması (Graph Isomorphism)
-* Sistemde bulunan **Ana Grafik (Main Graph)** ile **İkincil Grafik (Secondary Graph)** arasındaki yapısal eşliği kontrol eder.
-* Eğer grafikler izomorfikse, düğümlerin birbirine nasıl eşlendiğini (Mapping) gösterir (Örn: `A <-- C`, `B <-- D`).
+### 3. Graph Isomorphism
+* Checks for structural equivalence between the **Main Graph** and a **Secondary Graph** currently in the system.
+* If the graphs are isomorphic, it displays the mapping of vertices (e.g., `A <-- C`, `B <-- D`).
 
-### 4. Matris İşlemleri
-* **Komşuluk Matrisi (Adjacency Matrix):** Grafiğin matris gösterimini oluşturur.
-* **Kuvvet Matrisleri ($R^n$):** Grafın $R^2, R^3 ... R^n$ erişilebilirlik matrislerini hesaplar.
-* **Transitive Closure ($R^*$):** Floyd-Warshall algoritması mantığıyla grafın tam erişilebilirlik matrisini çıkarır.
-* **En Kısa Yol Matrisi ($R_{min}$):** Düğümler arası en kısa mesafeleri hesaplar.
+### 4. Matrix Operations
+* **Adjacency Matrix:** Generates the matrix representation of the graph.
+* **Power Matrices ($R^n$):** Calculates the $R^2, R^3 ... R^n$ reachability matrices of the graph.
+* **Transitive Closure ($R^*$):** Derives the full reachability matrix of the graph based on the logic of the Floyd-Warshall algorithm.
+* **Shortest Path Matrix ($R_{min}$):** Calculates the shortest distances between vertices.
 
-### 5. Kayıt ve Yönetim (Depot System)
-* Grafikler `.txt` dosyalarına kaydedilebilir ve geri yüklenebilir.
-* **9 Adet Depo (Depot):** Hafızada tutulan 9 farklı grafik slotu arasında hızlı geçiş ve kopyalama yapılabilir.
+### 5. Saving and Management (Depot System)
+* Graphs can be saved to and loaded from `.txt` files.
+* **9 Depots:** Enables quick switching and copying among 9 different graph slots held in memory.
 
-## 🛠 Kurulum ve Çalıştırma
+## 🛠️ Installation and Execution
 
-Proje `Enigma-Edited2.jar` kütüphanesine bağımlıdır.
+The project is dependent on the `Enigma-Edited2.jar` library.
 
-1.  Projeyi indirin.
-2.  `src` klasörü içerisindeki `GraphGeneratorTest.java` dosyasını çalıştırın.
-3.  **Not:** IDE kullanıyorsanız (IntelliJ, Eclipse), `Enigma-Edited2.jar` dosyasının projenin "Build Path" veya "Library" kısmına eklendiğinden emin olun.
+1. Download the project.
+2. Run the `GraphGeneratorTest.java` file located in the `src` folder.
+3. **Note:** If you are using an IDE (IntelliJ, Eclipse), ensure that the `Enigma-Edited2.jar` file is added to the "Build Path" or "Library" section of the project.
 
-## 💻 Klavye Kontrolleri
+## 💻 Keyboard Controls
 
-Uygulama tamamen klavye kısayolları ile yönetilir:
+The application is managed entirely via keyboard shortcuts:
 
-| Tuş | İşlev |
+| Key | Function |
 | :--- | :--- |
-| **Z** | **Graph Generation Menu:** Yeni grafik oluşturma ve matris işlemleri menüsünü açar. |
-| **X** | **Graph Test Menu:** Grafiğin özelliklerini (İzomorfizma, Bipartite vb.) test eden menüyü açar. |
-| **C** | **Graph Transfer Menu:** Kopyalama, kaydetme ve yükleme menüsünü açar. |
-| **D** | **Drawing Mode:** Kenar çizim stilini değiştirir (Düz çizgi / Karakter bazlı). |
+| **Z** | **Graph Generation Menu:** Opens the menu for generating new graphs and matrix operations. |
+| **X** | **Graph Test Menu:** Opens the menu that tests graph properties (Isomorphism, Bipartite, etc.). |
+| **C** | **Graph Transfer Menu:** Opens the menu for copying, saving, and loading graphs. |
+| **D** | **Drawing Mode:** Toggles the edge drawing style (Straight line / Character-based). |
 
-### Transfer Menüsü Kısayolları (C Menüsü Açıkken):
-* **G:** Ana grafiği İkincil grafiğe kopyalar.
-* **H:** İkincil grafiği Ana grafiğe kopyalar.
-* **S / L:** Ana grafiği dosyaya kaydeder / dosyadan yükler (`graph1.txt`).
-* **Q - O (Q,W,E...):** Ana grafiği Depo 1-9'a kopyalar.
-* **1 - 9:** Depo 1-9'daki grafiği Ana grafiğe yükler.
-* **D / F:** Depoları topluca dosyaya kaydeder / yükler.
+### Transfer Menu Shortcuts (While C Menu is Open):
+* **G:** Copies the Main graph to the Secondary graph.
+* **H:** Copies the Secondary graph to the Main graph.
+* **S / L:** Saves/Loads the Main graph to/from a file (`graph1.txt`).
+* **Q - O (Q,W,E...):** Copies the Main graph to Depot 1-9.
+* **1 - 9:** Loads the graph from Depot 1-9 to the Main graph.
+* **D / F:** Batch saves/loads depots to/from files.
 
-## 📂 Dosya Yapısı
+## 📂 File Structure
 
-* `src/Graph.java`: Graf veri yapısı, çizim algoritmaları ve Havel-Hakimi mantığı.
-* `src/UIManager.java`: Kullanıcı arayüzü, menüler ve dosya işlemleri.
-* `src/MatrixCalculator.java`: Matris çarpımı ve Floyd-Warshall algoritmaları.
-* `src/GraphTestMenu.java`: İzomorfizma ve graf tipi analizleri.
-* `src/Game.java`: Enigma kütüphanesi ile fare/klavye testi için ek modül.
-
-## 👨‍💻 Geliştirici
-
-* **Geliştirici:** Burak Şeker
+* `src/Graph.java`: Graph data structure, drawing algorithms, and Havel-Hakimi logic.
+* `src/UIManager.java`: User interface, menus, and file operations.
+* `src/MatrixCalculator.java`: Matrix multiplication and Floyd-Warshall algorithms.
+* `src/GraphTestMenu.java`: Isomorphism and graph type analyses.
+* `src/Game.java`: Additional module for testing mouse/keyboard input with the Enigma library.
 
 ---
+
+### Developer : Ömür Burak Şeker
